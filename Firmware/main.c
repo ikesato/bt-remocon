@@ -268,25 +268,33 @@ static void InitializeSystem(void)
     LED2_PORT = 0;
     IRLED_PORT= 0;
 
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => *  2 =>  0.16666us -> *65536 = 10.923ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => *  4 =>  0.33333us -> *65536 = 21.845ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => *  8 =>  0.66666us -> *65536 = 43.69ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => * 16 =>  1.33333us -> *65536 = 87.381ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => * 32 =>  2.66666us -> *65536 = 174.76ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => * 64 =>  5.33333us -> *65536 = 349.5ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => *128 => 10.66666us -> *65536 = 699ms
-    // timer0 48MHz/4=12MHz => 0.08333[us/cycle] => *256 => 21.33333us -> *65536 = 1398ms
+    // timer list
+    // 48MHz/4=12MHz => 0.08333[us/cycle]
+    // 0.08333[us/cycle] *  2 =  0.16666us -> max: *65536 = 10.923ms
+    // 0.08333[us/cycle] *  4 =  0.33333us -> max: *65536 = 21.845ms
+    // 0.08333[us/cycle] *  8 =  0.66666us -> max: *65536 = 43.69ms
+    // 0.08333[us/cycle] * 16 =  1.33333us -> max: *65536 = 87.381ms
+    // 0.08333[us/cycle] * 32 =  2.66666us -> max: *65536 = 174.76ms
+    // 0.08333[us/cycle] * 64 =  5.33333us -> max: *65536 = 349.5ms
+    // 0.08333[us/cycle] *128 = 10.66666us -> max: *65536 = 699ms
+    // 0.08333[us/cycle] *256 = 21.33333us -> max: *65536 = 1398ms
+
+    // timer0 max=349.5[ms]
     T0CON = TIMER_INT_ON &
             T0_16BIT &
             T0_SOURCE_INT &
             T0_EDGE_RISE & // なんでもいい
             T0_PS_1_64;
 
-    // max 43.69[ms]
+    // timer1 max=43.69[ms]
     T1CON = TIMER_INT_ON &
             T1_16BIT_RW &
             T1_SOURCE_INT &
             T1_PS_1_8;
+
+    // timer2 max=5.33333[us]*256=1.365[ms] 約1ms
+    T2CON = T2_POST_1_4 &
+            T2_PS_1_16;
 
     // configure USART
     OpenUSART(USART_TX_INT_OFF &    // 送信割込みの禁止
@@ -425,8 +433,12 @@ void ButtonProc(void)
     ButtonProcEveryMainLoop(PORTB);
     if (ButtonLongDownState() & SW_BIT)
         enableReadIR = !enableReadIR ;
-
     LED2_PORT = enableReadIR;
+
+    if(PIR1bits.TMR2IF) {
+        PIR1bits.TMR2IF = 0;
+        ButtonProcEvery1ms();
+    }
 }
 
 void ReadIR(void)
