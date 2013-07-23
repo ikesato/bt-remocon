@@ -12,7 +12,6 @@ BYTE buffNum;
 WORD totalSize;
 
 
-BYTE ReadBYTEBuffer(WORD i);
 BYTE WriteBYTEBuffer(WORD i, BYTE v);
 
 void InitBuffer(void)

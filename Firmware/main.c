@@ -1,6 +1,7 @@
 /** INCLUDES *******************************************************/
 #include <timers.h>
 #include <delays.h>
+#include <usart.h>
 
 #include "HardwareProfile.h"
 
@@ -99,7 +100,6 @@ static void InitializeSystem(void);
 void ProcessIO(void);
 void YourHighPriorityISRCode();
 void YourLowPriorityISRCode();
-void UserInit(void);
 void ButtonProc(void);
 void ReadIR(void);
 void SendIR(void);
@@ -111,8 +111,8 @@ void SerialProc(void);
 void PutsString(const rom char *str);
 void PutsStringCPtr(char *str);
 void PrintIRBuffer(const rom char *title);
-
-BYTE ReadBYTEBuffer(WORD pos); // for debug
+BYTE ReadSerial(char *buffer, BYTE length);
+void WriteSerial(char *str);
 
 /** VECTOR REMAPPING ***********************************************/
 #if defined(__18CXX)
@@ -257,18 +257,7 @@ int main(void)
 static void InitializeSystem(void)
 {
     ADCON1 |= 0x0F;                 // Default all pins to digital
-    UserInit();
-}
 
-
-
-/******************************************************************************
- * Function:        void UserInit(void)
- * Overview:        This routine should take care of all of the demo code
- *                  initialization that is required.
- *****************************************************************************/
-void UserInit(void)
-{
     // initialize
     LED1_TRIS = 0; // LED1 output
     LED2_TRIS = 0; // LED2 output
@@ -299,6 +288,14 @@ void UserInit(void)
             T1_SOURCE_INT &
             T1_PS_1_8;
 
+    // configure USART
+    OpenUSART(USART_TX_INT_OFF &    // 送信割込みの禁止
+              USART_RX_INT_OFF &    // 受信割込みの禁止
+              USART_ASYNCH_MODE &   // 非同期（調歩）モード
+              USART_EIGHT_BIT &     // ８ビットモード
+              USART_CONT_RX &       // 連続受信モード
+              USART_BRGH_LOW,       // 低速ボーレート
+              77);                  // 9600 bps
 
     // initilize other variables
     InitBuffer();
@@ -322,7 +319,6 @@ void ProcessIO(void)
     ButtonProc();
     ReadIR();
     SendIR();
-
     SerialProc();
 }
 
@@ -340,13 +336,13 @@ void SerialProc(void)
     WORD v;
     WORD bpos;
 
-    // TODO: check whether data is recieved from uart
-    //if (data.is_ready() == 0)
-    //  return;
+    // check whether data is recieved from uart
+    if (!DataRdyUSART())
+        return;
 
     bpos = 0;
-    // TODO: read data from uart
-    //numBytesRead = read_uart(uartInBuffer);
+    // read data from uart
+    numBytesRead = ReadSerial(uartInBuffer, 64);
     if(numBytesRead == 0)
         return;
 
@@ -356,7 +352,7 @@ void SerialProc(void)
     pos = 0;
     byteOrWord = 0;
     exit = 0;
- loop:
+loop:
     for(i=0;i<numBytesRead;i++) {
         if (readPtr[i]=='\r' || readPtr[i]=='\n'){
             if (pos>0) {
@@ -419,8 +415,7 @@ void SerialProc(void)
         }
     }
     bpos += numBytesRead;
-    //TODO:read_uart
-    //numBytesRead = read_uart(uartInBuffer,64);
+    numBytesRead = ReadSerial(uartInBuffer, 64);
     goto loop;
 }
 
@@ -504,15 +499,13 @@ void PrintIRBuffer(const rom char *title)
                 separator,
                 hilo ? 'H' : 'L',
                 t);
-        // TODO: send uart
-        //putsUSBUSART(uartOutBuffer);
+        WriteSerial(uartOutBuffer);
         hilo=!hilo;
         separator[0] = ',';
     }
     if (!WaitToReadySerial()) return;
     sprintf(uartOutBuffer, (far rom char*)"\r\n");
-    // TODO: send uart
-    //putsUSBUSART(uartOutBuffer);
+    WriteSerial(uartOutBuffer);
     if (!WaitToReadySerial()) return;
 }
 
@@ -576,16 +569,14 @@ void PutsString(const rom char *str)
 {
     if (!WaitToReadySerial()) return;
     strcpypgm2ram(uartOutBuffer, (const far rom char*)str);
-    // TODO: send uart
-    //putsUSBUSART(uartOutBuffer);
+    WriteSerial(uartOutBuffer);
     if (!WaitToReadySerial()) return;
 }
 
 void PutsStringCPtr(char *str)
 {
     if (!WaitToReadySerial()) return;
-    // TODO: send uart
-    //putsUSBUSART(str);
+    WriteSerial(str);
     if (!WaitToReadySerial()) return;
 }
 
@@ -618,6 +609,7 @@ void DelayIRFreqLo(void)
 
 /**
  * シリアル・ポートの Ready を待つ
+ * 出力ポートの busy 状態を見る
  * timer1 を使ってオーバフローならば 0 を返す
  * Ready になれば 1 を返す
  */
@@ -626,9 +618,35 @@ int WaitToReadySerial(void)
     WriteTimer1(0);
     PIR1bits.TMR1IF = 0;
     while(PIR1bits.TMR1IF==0) {
-        // TODO: wait to ready uart
-        //if (mUSBUSARTIsTxTrfReady())
-        //return 1;
+        // wait to ready uart
+        if (!BusyUSART())
+            return 1;
     }
     return 0;
+}
+
+
+/**
+ * シリアルからデータリード
+ * @param buffer 入力バッファ
+ * @param length サイズ
+ */
+BYTE ReadSerial(char *buffer, BYTE length)
+{
+    BYTE i;
+    for (i=0; i<length; i++) {
+        if (!DataRdyUSART())
+            break;
+        buffer[i++] = ReadUSART();
+    }
+    return i;
+}
+
+/**
+ * シリアルバッファへ書き込み
+ * @param str 出力バッファ
+ */
+void WriteSerial(char *str)
+{
+    putsUSART(str);
 }
