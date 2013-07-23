@@ -10,4 +10,6 @@ WORD ReadBuffer(WORD *pos, WORD *byteOrWord);
 BYTE WriteBuffer(WORD v, WORD *pos, WORD *byteOrWord);
 void WriteEOF(WORD pos);
 
+BYTE ReadBYTEBuffer(WORD pos); // for debug
+
 #endif//_buffer_h_

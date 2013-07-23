@@ -99,8 +99,5 @@
     #define DEMO_BOARD PICDEM_FS_USB
     #define PICDEM_FS_USB
     #define CLOCK_FREQ 48000000
-
-    /** SWITCH *********************************************************/
-    #define sw2                 PORTBbits.RB4
     
 #endif  //HARDWARE_PROFILE_PICDEM_FSUSB_H
