@@ -26,6 +26,13 @@ public class Bluetooth {
     }
 
     /**
+     * Return whether bluetooth settings is enabled or not
+     */
+    public boolean isEnabled() {
+        return mBtAdapter.isEnabled();
+    }
+
+    /**
      * List paired devices
      * @return already paired devices in the Phone
      */
@@ -48,9 +55,9 @@ public class Bluetooth {
         mBtAdapter.startDiscovery();
     }
 
-	/**
-	 * Register the receiver
-	 */
+    /**
+     * Register the receiver
+     */
     public void registerReceiver(Context context) {
         // Register for broadcasts when a device is discovered
         IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
@@ -61,9 +68,9 @@ public class Bluetooth {
         context.registerReceiver(mReceiver, filter);
     }
 
-	/**
-	 * Unregister the receiver
-	 */
+    /**
+     * Unregister the receiver
+     */
     public void unregisterReceiver(Context context) {
         context.unregisterReceiver(mReceiver);
     }
