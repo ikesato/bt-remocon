@@ -80,11 +80,16 @@
 //          これを udata の後に書くと収まらなくなる
 // http://tylercsf.blog123.fc2.com/blog-entry-189.html
 
-#pragma udata USER_RAM6=0x600
-BYTE buff_user1[0x200];
+//#pragma udata USER_RAM6=0x600
+//BYTE buff_user1[0x200];
+//
+//#pragma udata USER_RAM2=0x200
+//BYTE buff_user2[0x100];
+#pragma udata USER_RAM3=0x300
+BYTE buff_user1[0x400];
 
-#pragma udata USER_RAM2=0x200
-BYTE buff_user2[0x100];
+#pragma udata USER_RAM2=0x120
+BYTE buff_user2[0x1d0];
 
 #if defined(__18CXX)
     #pragma udata
@@ -360,8 +365,15 @@ void SerialProc(void)
     pos = 0;
     byteOrWord = 0;
     exit = 0;
+    PutsString("hello0\r\n");
 loop:
+    //PutsString("hello1\r\n");
     for(i=0;i<numBytesRead;i++) {
+     sprintf(uartOutBuffer,
+             (far rom char*)"hello2 [%d,%d,%d,0x%02x]\r\n",
+             bpos+i,bpos,i,readPtr[i]);
+     PutsStringCPtr(uartOutBuffer);
+
         if (readPtr[i]=='\r' || readPtr[i]=='\n'){
             if (pos>0) {
                 if (buffPtr==buff) {
@@ -645,13 +657,82 @@ int WaitToReadySerial(void)
  */
 BYTE ReadSerial(char *buffer, BYTE length)
 {
+    WORD i;
+
+    WriteTimer0(0xFFFF);
+    INTCONbits.TMR0IF = 0;
+    for (i=0; i<298; i++) {
+        WriteTimer0(0xFFFF);
+        INTCONbits.TMR0IF = 0;
+        while (DataRdyUSART()==0) {
+            if (INTCONbits.TMR0IF==1) {
+                sprintf(uartOutBuffer,
+                        (far rom char*)"error: timeout! RCSTA:0x%02x PIR1:0x%02x i:%d %d\r\n",
+                        RCSTA, PIR1, i, ReadTimer0());
+                PutsStringCPtr(uartOutBuffer);
+                return 0;
+            }
+            if (RCSTAbits.OERR==1) {
+                sprintf(uartOutBuffer,
+                        (far rom char*)"error: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
+                        RCSTA, PIR1, i);
+                PutsStringCPtr(uartOutBuffer);
+
+                RCSTAbits.CREN = 0; // clear the OVR flag 
+                RCSTAbits.CREN = 1; 
+                sprintf(uartOutBuffer,
+                        (far rom char*)"recovery: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
+                        RCSTA, PIR1, i);
+                PutsStringCPtr(uartOutBuffer);
+
+                return 0;
+            }
+        }
+        buff_user1[i] = ReadUSART();
+    }
+
+
+    sprintf(uartOutBuffer,
+            (far rom char*)"read completed!\r\n"
+            );
+    PutsStringCPtr(uartOutBuffer);
+    for (i=0; i<298; i++) {
+        sprintf(uartOutBuffer,
+                (far rom char*)"%c",
+                buff_user1[i]);
+        PutsStringCPtr(uartOutBuffer);
+    }
+    sprintf(uartOutBuffer,
+            (far rom char*)"\r\n"
+            );
+    PutsStringCPtr(uartOutBuffer);
+    return 0;
+
+#if 0
     BYTE i;
     for (i=0; i<length; i++) {
+        sprintf(uartOutBuffer,
+                (far rom char*)"RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
+                RCSTA, PIR1, i);
+        PutsStringCPtr(uartOutBuffer);
         if (!DataRdyUSART())
             break;
-        buffer[i++] = ReadUSART();
+    //  sprintf(uartOutBuffer,
+    //          (far rom char*)"hello3.1 [%d]\r\n",
+    //          i);
+    //  PutsStringCPtr(uartOutBuffer);
+        buffer[i] = ReadUSART();
+    //  sprintf(uartOutBuffer,
+    //          (far rom char*)"hello3.2 [%d,0x%02x]\r\n",
+    //          i,buffer[i]);
+    //  PutsStringCPtr(uartOutBuffer);
     }
+//  sprintf(uartOutBuffer,
+//          (far rom char*)"hello4 [%d]\r\n",
+//          i);
+//  PutsStringCPtr(uartOutBuffer);
     return i;
+#endif
 }
 
 /**
