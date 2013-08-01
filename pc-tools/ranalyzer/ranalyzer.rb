@@ -75,6 +75,7 @@ loop do
   str = STDIN.gets
   data = RemoconAnalyzer.make_send_data(str)
   next if data.nil?
+  puts "send data:[#{data}]" if debug
   (data+"\r\n").each_char {|s| sp.write s} # 1文字づつ転送する（バッファがあふれるので）
 end
 sp.close
