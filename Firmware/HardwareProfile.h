@@ -1,5 +1,5 @@
 /********************************************************************
- FileName:     	HardwareProfile - PICDEM FSUSB.h
+ FileName:      HardwareProfile - PICDEM FSUSB.h
  Dependencies:  See INCLUDES section
  Processor:     PIC18 USB Microcontrollers
  Hardware:      PICDEM FSUSB
@@ -76,7 +76,7 @@
     //Uncomment the following line to make the output HEX of this  
     //  project work with the MCHPUSB Bootloader    
     //#define PROGRAMMABLE_WITH_USB_MCHPUSB_BOOTLOADER
-	
+    
     //Uncomment the following line to make the output HEX of this 
     //  project work with the HID Bootloader
     #define PROGRAMMABLE_WITH_USB_HID_BOOTLOADER

@@ -80,24 +80,19 @@
 //          これを udata の後に書くと収まらなくなる
 // http://tylercsf.blog123.fc2.com/blog-entry-189.html
 
-//#pragma udata USER_RAM6=0x600
-//BYTE buff_user1[0x200];
-//
-//#pragma udata USER_RAM2=0x200
-//BYTE buff_user2[0x100];
 #pragma udata USER_RAM3=0x300
-BYTE buff_user1[0x400];
+BYTE signalBuffer[0x400];
 
 #pragma udata USER_RAM2=0x120
-BYTE buff_user2[0x1d0];
+BYTE uartInBuffer[0x1d0];
 
 #if defined(__18CXX)
     #pragma udata
 #endif
 
-char uartInBuffer[64];
-char uartOutBuffer[64];
+char uartOutBuffer[128];
 BYTE enableReadIR;
+BYTE buff_pos=0;
 
 
 /** P R I V A T E  P R O T O T Y P E S ***************************************/
@@ -116,7 +111,7 @@ void SerialProc(void);
 void PutsString(const rom char *str);
 void PutsStringCPtr(char *str);
 void PrintIRBuffer(const rom char *title);
-BYTE ReadSerial(char *buffer, BYTE length);
+WORD ReadSerial(BYTE *buffer, WORD length);
 void WriteSerial(char *str);
 
 /** VECTOR REMAPPING ***********************************************/
@@ -203,18 +198,10 @@ void WriteSerial(char *str);
     #pragma interrupt YourHighPriorityISRCode
     void YourHighPriorityISRCode()
     {
-        //INTCONbits.GIEH = 0;
-        //INTCONbits.GIEH = 1;
-
-        //Check which interrupt flag caused the interrupt.
-        //Service the interrupt
-        //Clear the interrupt flag
-        //Etc.
-        #if defined(USB_INTERRUPT)
-            USBDeviceTasks();
-        #endif
-    
-    }   //This return will be a "retfie fast", since this is in a #pragma interrupt section 
+        INTCONbits.GIEH = 0;
+        SerialProc();
+        INTCONbits.GIEH = 1;
+    }
     #pragma interruptlow YourLowPriorityISRCode
     void YourLowPriorityISRCode()
     {
@@ -222,9 +209,9 @@ void WriteSerial(char *str);
         //Service the interrupt
         //Clear the interrupt flag
         //Etc.
-    
+        LED1_PORT = 1;
+        PutsString("low interrupt!\r\n");
     }   //This return will be a "retfie", since this is in a #pragma interruptlow section 
-
 
 
 /** DECLARATIONS ***************************************************/
@@ -302,18 +289,37 @@ static void InitializeSystem(void)
             T2_PS_1_16;
 
     // configure USART
+    // For a device with FOSC of 16 MHz, desired baud rate of 9600, Asynchronous mode, 8-bit BRG:
+    // Desired Baud Rate = FOSC/(64 ([SPBRGH:SPBRG] + 1))
+    // Solving for SPBRGH:SPBRG:
+    // X = ((FOSC/Desired Baud Rate)/64) – 1
+    //   = ((16000000/9600)/64) – 1
+    //   = [25.042] = 25
+    // Calculated Baud Rate = 16000000/(64 (25 + 1))
+    //   = 9615
+    // Error = (Calculated Baud Rate – Desired Baud Rate)/Desired Baud Rate
+    //   = (9615 - 9600)/9600 = 0.16%
+
+    // FOSC == 48 [MHz]
+    //   X = ((48 * 1,000,000 / 9600)/64 -1
+    //     = 77.125
+    //   Calculated Baud Rate = 48 * 1,000,000 / (64 * (77+1)) = 9615.38
+    //   Error = (9615 - 9600) / 9600 = 0.16%
     OpenUSART(USART_TX_INT_OFF &    // 送信割込みの禁止
-              USART_RX_INT_OFF &    // 受信割込みの禁止
+              USART_RX_INT_ON &     // 受信割込みの許可
               USART_ASYNCH_MODE &   // 非同期（調歩）モード
               USART_EIGHT_BIT &     // ８ビットモード
               USART_CONT_RX &       // 連続受信モード
               USART_BRGH_LOW,       // 低速ボーレート
               77);                  // 9600 bps
 
+    RCONbits.IPEN = 0;      //割込み優先順位制御：OFF (RCON レジスタのIPENビット = 0)
+    INTCONbits.GIE = 1;     // 全割込み許可
+    INTCONbits.PEIE = 1;    // 周辺機能の割込み有効
+
     // initilize other variables
     InitBuffer();
-    AddBuffer(buff_user1, sizeof(buff_user1));
-    AddBuffer(buff_user2, sizeof(buff_user2));
+    AddBuffer(signalBuffer, sizeof(signalBuffer));
     ButtonInit(SW_BIT);
     enableReadIR = 1;
 }
@@ -332,16 +338,15 @@ void ProcessIO(void)
     ButtonProc();
     ReadIR();
     SendIR();
-    SerialProc();
 }
 
 void SerialProc(void)
 {
-    BYTE numBytesRead;
+    WORD numBytesRead;
     BYTE i;
     char buff[10];
     char *buffPtr;
-    char *readPtr;
+    BYTE *readPtr;
     char state; // 0:readed ',' 1:readed number
     BYTE exit;
     WORD byteOrWord; // 0:未設定
@@ -355,8 +360,8 @@ void SerialProc(void)
 
     bpos = 0;
     // read data from uart
-    numBytesRead = ReadSerial(uartInBuffer, 64);
-    if(numBytesRead == 0)
+    numBytesRead = ReadSerial(uartInBuffer, sizeof(uartInBuffer));
+    if (numBytesRead == 0 || numBytesRead == 0xFFFF)
         return;
 
     state = 0;
@@ -365,15 +370,8 @@ void SerialProc(void)
     pos = 0;
     byteOrWord = 0;
     exit = 0;
-    PutsString("hello0\r\n");
 loop:
-    //PutsString("hello1\r\n");
     for(i=0;i<numBytesRead;i++) {
-     sprintf(uartOutBuffer,
-             (far rom char*)"hello2 [%d,%d,%d,0x%02x]\r\n",
-             bpos+i,bpos,i,readPtr[i]);
-     PutsStringCPtr(uartOutBuffer);
-
         if (readPtr[i]=='\r' || readPtr[i]=='\n'){
             if (pos>0) {
                 if (buffPtr==buff) {
@@ -435,7 +433,9 @@ loop:
         }
     }
     bpos += numBytesRead;
-    numBytesRead = ReadSerial(uartInBuffer, 64);
+    numBytesRead = ReadSerial(uartInBuffer, sizeof(uartInBuffer));
+    if (numBytesRead == 0xFFFF)
+        return;
     goto loop;
 }
 
@@ -655,84 +655,29 @@ int WaitToReadySerial(void)
  * @param buffer 入力バッファ
  * @param length サイズ
  */
-BYTE ReadSerial(char *buffer, BYTE length)
+WORD ReadSerial(BYTE *buffer, WORD length)
 {
-    WORD i;
-
-    WriteTimer0(0xFFFF);
-    INTCONbits.TMR0IF = 0;
-    for (i=0; i<298; i++) {
-        WriteTimer0(0xFFFF);
-        INTCONbits.TMR0IF = 0;
-        while (DataRdyUSART()==0) {
-            if (INTCONbits.TMR0IF==1) {
-                sprintf(uartOutBuffer,
-                        (far rom char*)"error: timeout! RCSTA:0x%02x PIR1:0x%02x i:%d %d\r\n",
-                        RCSTA, PIR1, i, ReadTimer0());
-                PutsStringCPtr(uartOutBuffer);
-                return 0;
-            }
-            if (RCSTAbits.OERR==1) {
-                sprintf(uartOutBuffer,
-                        (far rom char*)"error: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
-                        RCSTA, PIR1, i);
-                PutsStringCPtr(uartOutBuffer);
-
-                RCSTAbits.CREN = 0; // clear the OVR flag 
-                RCSTAbits.CREN = 1; 
-                sprintf(uartOutBuffer,
-                        (far rom char*)"recovery: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
-                        RCSTA, PIR1, i);
-                PutsStringCPtr(uartOutBuffer);
-
-                return 0;
-            }
-        }
-        buff_user1[i] = ReadUSART();
-    }
-
-
-    sprintf(uartOutBuffer,
-            (far rom char*)"read completed!\r\n"
-            );
-    PutsStringCPtr(uartOutBuffer);
-    for (i=0; i<298; i++) {
-        sprintf(uartOutBuffer,
-                (far rom char*)"%c",
-                buff_user1[i]);
-        PutsStringCPtr(uartOutBuffer);
-    }
-    sprintf(uartOutBuffer,
-            (far rom char*)"\r\n"
-            );
-    PutsStringCPtr(uartOutBuffer);
-    return 0;
-
-#if 0
     BYTE i;
     for (i=0; i<length; i++) {
-        sprintf(uartOutBuffer,
-                (far rom char*)"RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
-                RCSTA, PIR1, i);
-        PutsStringCPtr(uartOutBuffer);
         if (!DataRdyUSART())
             break;
-    //  sprintf(uartOutBuffer,
-    //          (far rom char*)"hello3.1 [%d]\r\n",
-    //          i);
-    //  PutsStringCPtr(uartOutBuffer);
         buffer[i] = ReadUSART();
-    //  sprintf(uartOutBuffer,
-    //          (far rom char*)"hello3.2 [%d,0x%02x]\r\n",
-    //          i,buffer[i]);
-    //  PutsStringCPtr(uartOutBuffer);
     }
-//  sprintf(uartOutBuffer,
-//          (far rom char*)"hello4 [%d]\r\n",
-//          i);
-//  PutsStringCPtr(uartOutBuffer);
+    if (RCSTAbits.OERR==1) {
+        sprintf(uartOutBuffer,
+                (far rom char*)"error: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
+                RCSTA, PIR1, i);
+        PutsStringCPtr(uartOutBuffer);
+
+        RCSTAbits.CREN = 0; // clear the OVR flag 
+        RCSTAbits.CREN = 1; 
+        sprintf(uartOutBuffer,
+                (far rom char*)"recovery: overrun! RCSTA:0x%02x PIR1:0x%02x i:%d\r\n",
+                RCSTA, PIR1, i);
+        PutsStringCPtr(uartOutBuffer);
+        return 0xFFFF;
+    }
     return i;
-#endif
 }
 
 /**
