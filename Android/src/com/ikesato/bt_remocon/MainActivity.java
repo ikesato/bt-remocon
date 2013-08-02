@@ -78,8 +78,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Log.v(TAG, "connect button");
                 Log.v(TAG, "==============");
-				//connectDevice("00:13:01:10:36:42");
-				connectDevice("84:00:D2:C2:58:2D");
+				connectDevice("00:13:01:10:36:42");
+				//connectDevice("84:00:D2:C2:58:2D");
             }
         });
     }
