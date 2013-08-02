@@ -1,5 +1,6 @@
 package com.ikesato.bt_remocon;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import android.app.Activity;
@@ -9,10 +10,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ikesato.bluetooth.Bluetooth;
@@ -24,6 +27,7 @@ public class MainActivity extends Activity {
     private BluetoothChatService mChatService = null;
 
     private static final int REQUEST_ENABLE_BT = 1;
+	private static final int REQUEST_SPEECH = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,14 @@ public class MainActivity extends Activity {
 				//connectDevice("84:00:D2:C2:58:2D");
             }
         });
+
+		findViewById(R.id.start_recognize_button).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startRecognizeSpeech();
+			}
+		});
+		startRecognizeSpeech();
     }
 
     @Override
@@ -111,6 +123,14 @@ public class MainActivity extends Activity {
         mBluetooth.unregisterReceiver(this);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Stop the Bluetooth chat services
+        if (mChatService != null) mChatService.stop();
+        Log.e(TAG, "--- ON DESTROY ---");
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
         case REQUEST_ENABLE_BT:
@@ -121,7 +141,27 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, R.string.bt_not_enabled_leaving, Toast.LENGTH_SHORT).show();
                 finish();
             }
-        }
+			break;
+		case REQUEST_SPEECH:
+			Log.v("aaaaaaaaaaaaaaaaaaaaaaaaa", "resultCode=" + String.valueOf(resultCode));
+			if (resultCode == RESULT_OK) {
+				ArrayList<String> results = data.getStringArrayListExtra(
+					RecognizerIntent.EXTRA_RESULTS);
+
+				TextView t = (TextView)findViewById(R.id.result);
+				t.setText("");
+				for (String s : results) {
+					t.append(s + "\n");
+				}
+				for (String s : results) {
+					sendSignal(s);
+				}
+				startRecognizeSpeech();
+			} else if (resultCode == RESULT_CANCELED) {
+			}
+			break;
+		}
+		super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -144,6 +184,10 @@ public class MainActivity extends Activity {
 
         // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(this, mHandler);
+
+
+		// toriaezu
+		connectDevice("00:13:01:10:36:42");
 	}
 
     // The Handler that gets information back from the BluetoothChatService
@@ -176,7 +220,8 @@ public class MainActivity extends Activity {
                 byte[] readBuf = (byte[]) msg.obj;
                 // construct a string from the valid bytes in the buffer
                 String readMessage = new String(readBuf, 0, msg.arg1);
-                Log.v(TAG, "MESSAGE READ : " + readMessage);
+				// TODO:すげー多い
+                //Log.v(TAG, "MESSAGE READ : " + readMessage);
                 break;
             case BluetoothChatService.MESSAGE_DEVICE_NAME:
                 // save the connected device's name
@@ -225,4 +270,54 @@ public class MainActivity extends Activity {
         mChatService.connect(address);
     }
 
+
+	private void startRecognizeSpeech() {
+		Intent intent = new Intent(
+			RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+			//RecognizerIntent.ACTION_WEB_SEARCH);
+		intent.putExtra(
+			RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+			RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+		startActivityForResult(intent, REQUEST_SPEECH);
+	}
+
+	private void sendSignal(String str) {
+
+		
+		if (str.equals("ホーム") ||
+			str.equals("home"))
+			sendMessage("H441,L110,H221,L110,H221,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2153,H441,L110,H221,L110,H221,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2153,H441,L110,H221,L110,H221,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2153\r\n");
+
+		else if (str.equals("上") ||
+				 str.equals("うえ"))
+			sendMessage("H441,L110,H221,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H221,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H221,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043\r\n");
+
+		else if (str.equals("下") ||
+				 str.equals("した"))
+			sendMessage("H441,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043\r\n");
+
+		else if (str.equals("左") ||
+				 str.equals("ひだり"))
+			sendMessage("H442,L110,H221,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L1922,H442,L110,H221,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L1922,H442,L110,H221,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L1922\r\n");
+
+		else if (str.equals("右") ||
+				 str.equals("みぎ"))
+			sendMessage("H441,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043,H441,L110,H110,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2043\r\n");
+
+		else if (str.equals("キャンセル") ||
+				 str.equals("Cancel") ||
+				 str.equals("もどる") ||
+				 str.equals("戻る"))
+			sendMessage("H441,L110,H110,L110,H221,L110,H221,L110,H221,L110,H110,L110,H110,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2264,H441,L110,H110,L110,H221,L110,H221,L110,H221,L110,H110,L110,H110,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2264,H441,L110,H110,L110,H221,L110,H221,L110,H221,L110,H110,L110,H110,L110,H110,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H110,L110,H221,L110,H110,L110,H221,L110,H221,L110,H221,L110,H221,L110,H221,L2264\r\n");
+
+		else if (str.equals("けってい") ||
+				 str.equals("決定") ||
+				 str.equals("OK") ||
+				 str.equals("オーケー"))
+			sendMessage("H440,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H110,L110,H110,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H220,L110,H220,L110,H220,L2274,H440,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H110,L110,H110,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H220,L110,H220,L110,H220,L2274,H440,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H110,L110,H110,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H110,L110,H220,L110,H110,L110,H220,L110,H220,L110,H220,L110,H220,L110,H220,L2274\r\n");
+
+		else if (str.equals("テレビ") ||
+				 str.equals("TV"))
+			sendMessage("H1551,L776,H97,L291,H97,L291,H97,L97,H97,L97,H97,L97,H97,L97,H97,L97,H97,L97,H97,L291,H97,L291,H97,L291,H97,L97,H97,L291,H97,L97,H97,L97,H97,L97,H97,L4019,H97,L291,H97,L291,H97,L97,H97,L97,H97,L97,H97,L97,H97,L97,H97,L97,H97,L291,H97,L291,H97,L291,H97,L97,H97,L291,H97,L97,H97,L97,H97,L97,H97,L4019\r\n");
+	}
 }

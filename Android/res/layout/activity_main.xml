@@ -40,4 +40,16 @@
         android:layout_height="wrap_content"
         android:text="Send" />
 
+    <Button
+        android:id="@+id/start_recognize_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speech" />
+
+	<TextView
+		android:id="@+id/result"
+		android:inputType="textMultiLine"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"/>
+
 </LinearLayout>
