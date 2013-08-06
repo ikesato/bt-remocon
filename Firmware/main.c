@@ -387,8 +387,8 @@ loop:
                 buffPtr = buff;
 
                 WriteEOF(pos);
-                PrintIRBuffer("echo,");
                 SendIRImpl();
+                PrintIRBuffer("echo,");
             }
             return;
         } else if (state==0) {

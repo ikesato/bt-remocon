@@ -1,5 +1,5 @@
 MPLINK 4.40, Linker
-Linker Map File - Created Fri Aug  2 03:04:24 2013
+Linker Map File - Created Tue Aug  6 01:52:05 2013
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -12,73 +12,73 @@ REMAPPED_HIGH_INTERRUPT_VECTOR       code   0x001008    program   0x000006
 REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                    .cinit    romdata   0x00102a    program   0x00000e
          .code_vfprintf.o       code   0x001038    program   0x000c22
-             .code_main.o       code   0x001c5a    program   0x000962
-           .code_buffer.o       code   0x0025bc    program   0x000440
-             .stringtable    romdata   0x0029fc    program   0x00010b
-        .idata_buffer.o_i    romdata   0x002b07    program   0x000000
-    .romdata__user_putc.o    romdata   0x002b07    program   0x000000
-         .idata_uopen.o_i    romdata   0x002b07    program   0x000000
-        .idata_t0read.o_i    romdata   0x002b07    program   0x000000
-         .idata_uread.o_i    romdata   0x002b07    program   0x000000
-         .romdata_udefs.o    romdata   0x002b07    program   0x000000
-       .romdata_t0write.o    romdata   0x002b07    program   0x000000
-       .idata_t1write.o_i    romdata   0x002b07    program   0x000000
-        .idata___init.o_i    romdata   0x002b07    program   0x000000
-         .romdata_uputs.o    romdata   0x002b07    program   0x000000
-        .romdata_uwrite.o    romdata   0x002b07    program   0x000000
-       .romdata_sprintf.o    romdata   0x002b07    program   0x000000
-      .idata_vfprintf.o_i    romdata   0x002b07    program   0x000000
-    .idata__user_putc.o_i    romdata   0x002b07    program   0x000000
-          .idata_putc.o_i    romdata   0x002b07    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x002b07    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x002b07    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x002b07    program   0x000000
-         .idata_c018i.o_i    romdata   0x002b07    program   0x000000
-        .romdata_button.o    romdata   0x002b07    program   0x000000
-        .idata_button.o_i    romdata   0x002b07    program   0x000000
-          .romdata_main.o    romdata   0x002b07    program   0x000000
-            .code_c018i.o       code   0x002b08    program   0x000000
-            .code_udefs.o       code   0x002b08    program   0x000000
-           .code_button.o       code   0x002b08    program   0x0000f4
-                   STDLIB       code   0x002bfc    program   0x0000ea
-          .code_sprintf.o       code   0x002ce6    program   0x0000ac
-               _cinit_scn       code   0x002d92    program   0x00009e
-                   STRING       code   0x002e30    program   0x000098
-            .code_uopen.o       code   0x002ec8    program   0x00008a
-             .code_putc.o       code   0x002f52    program   0x000084
-          .code_fxm3232.o       code   0x002fd6    program   0x000070
-                     PROG       code   0x003046    program   0x00005a
-            .code_uputs.o       code   0x0030a0    program   0x00004c
-         .code_fxd3232u.o       code   0x0030ec    program   0x000048
-            .code_uread.o       code   0x003134    program   0x00003e
-           .code_t0read.o       code   0x003172    program   0x00003e
-          .code_t1write.o       code   0x0031b0    program   0x000038
-          .code_t0write.o       code   0x0031e8    program   0x000038
-             D10KTCYXCODE       code   0x003220    program   0x00002e
-           .code_uwrite.o       code   0x00324e    program   0x00002e
-                    CTYPE       code   0x00327c    program   0x000024
-                    .code       code   0x0032a0    program   0x000020
-             _startup_scn       code   0x0032c0    program   0x00001c
-                    STDIO       code   0x0032dc    program   0x00001c
-              D10TCYXCODE       code   0x0032f8    program   0x000016
-      .romdata_vfprintf.o    romdata   0x00330e    program   0x000011
-         .romdata_c018i.o    romdata   0x00331f    program   0x000000
-        .romdata_buffer.o    romdata   0x00331f    program   0x000000
-         .romdata_uopen.o    romdata   0x00331f    program   0x000000
-          .romdata_putc.o    romdata   0x00331f    program   0x000000
-        .romdata_t0read.o    romdata   0x00331f    program   0x000000
-       .romdata_fxm3232.o    romdata   0x00331f    program   0x000000
-         .romdata_uread.o    romdata   0x00331f    program   0x000000
-         .idata_udefs.o_i    romdata   0x00331f    program   0x000000
-          .idata_main.o_i    romdata   0x00331f    program   0x000001
-       .idata_t0write.o_i    romdata   0x00331f    program   0x000000
-        .romdata___init.o    romdata   0x00331f    program   0x000000
-         .idata_uputs.o_i    romdata   0x00331f    program   0x000000
-        .idata_uwrite.o_i    romdata   0x00331f    program   0x000000
-       .idata_sprintf.o_i    romdata   0x00331f    program   0x000000
-       .romdata_t1write.o    romdata   0x00331f    program   0x000000
-       .code__user_putc.o       code   0x003320    program   0x000002
-           .code___init.o       code   0x003322    program   0x000002
+             .code_main.o       code   0x001c5a    program   0x000960
+           .code_buffer.o       code   0x0025ba    program   0x000440
+             .stringtable    romdata   0x0029fa    program   0x00010b
+        .idata_buffer.o_i    romdata   0x002b05    program   0x000000
+    .romdata__user_putc.o    romdata   0x002b05    program   0x000000
+         .idata_uopen.o_i    romdata   0x002b05    program   0x000000
+        .idata_t0read.o_i    romdata   0x002b05    program   0x000000
+         .idata_uread.o_i    romdata   0x002b05    program   0x000000
+         .romdata_udefs.o    romdata   0x002b05    program   0x000000
+       .romdata_t0write.o    romdata   0x002b05    program   0x000000
+       .idata_t1write.o_i    romdata   0x002b05    program   0x000000
+        .idata___init.o_i    romdata   0x002b05    program   0x000000
+         .romdata_uputs.o    romdata   0x002b05    program   0x000000
+        .romdata_uwrite.o    romdata   0x002b05    program   0x000000
+       .romdata_sprintf.o    romdata   0x002b05    program   0x000000
+      .idata_vfprintf.o_i    romdata   0x002b05    program   0x000000
+    .idata__user_putc.o_i    romdata   0x002b05    program   0x000000
+          .idata_putc.o_i    romdata   0x002b05    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x002b05    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x002b05    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x002b05    program   0x000000
+         .idata_c018i.o_i    romdata   0x002b05    program   0x000000
+        .romdata_button.o    romdata   0x002b05    program   0x000000
+        .idata_button.o_i    romdata   0x002b05    program   0x000000
+          .romdata_main.o    romdata   0x002b05    program   0x000000
+            .code_c018i.o       code   0x002b06    program   0x000000
+            .code_udefs.o       code   0x002b06    program   0x000000
+           .code_button.o       code   0x002b06    program   0x0000f4
+                   STDLIB       code   0x002bfa    program   0x0000ea
+          .code_sprintf.o       code   0x002ce4    program   0x0000ac
+               _cinit_scn       code   0x002d90    program   0x00009e
+                   STRING       code   0x002e2e    program   0x000098
+            .code_uopen.o       code   0x002ec6    program   0x00008a
+             .code_putc.o       code   0x002f50    program   0x000084
+          .code_fxm3232.o       code   0x002fd4    program   0x000070
+                     PROG       code   0x003044    program   0x00005a
+            .code_uputs.o       code   0x00309e    program   0x00004c
+         .code_fxd3232u.o       code   0x0030ea    program   0x000048
+            .code_uread.o       code   0x003132    program   0x00003e
+           .code_t0read.o       code   0x003170    program   0x00003e
+          .code_t1write.o       code   0x0031ae    program   0x000038
+          .code_t0write.o       code   0x0031e6    program   0x000038
+             D10KTCYXCODE       code   0x00321e    program   0x00002e
+           .code_uwrite.o       code   0x00324c    program   0x00002e
+                    CTYPE       code   0x00327a    program   0x000024
+                    .code       code   0x00329e    program   0x000020
+             _startup_scn       code   0x0032be    program   0x00001c
+                    STDIO       code   0x0032da    program   0x00001c
+              D10TCYXCODE       code   0x0032f6    program   0x000016
+      .romdata_vfprintf.o    romdata   0x00330c    program   0x000011
+         .romdata_c018i.o    romdata   0x00331d    program   0x000000
+        .romdata_buffer.o    romdata   0x00331d    program   0x000000
+         .romdata_uopen.o    romdata   0x00331d    program   0x000000
+          .romdata_putc.o    romdata   0x00331d    program   0x000000
+        .romdata_t0read.o    romdata   0x00331d    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00331d    program   0x000000
+         .romdata_uread.o    romdata   0x00331d    program   0x000000
+         .idata_udefs.o_i    romdata   0x00331d    program   0x000000
+          .idata_main.o_i    romdata   0x00331d    program   0x000001
+       .idata_t0write.o_i    romdata   0x00331d    program   0x000000
+        .romdata___init.o    romdata   0x00331d    program   0x000000
+         .idata_uputs.o_i    romdata   0x00331d    program   0x000000
+        .idata_uwrite.o_i    romdata   0x00331d    program   0x000000
+       .idata_sprintf.o_i    romdata   0x00331d    program   0x000000
+       .romdata_t1write.o    romdata   0x00331d    program   0x000000
+       .code__user_putc.o       code   0x00331e    program   0x000002
+           .code___init.o       code   0x003320    program   0x000002
     .config_300000_main.o    romdata   0x300000    program   0x000001
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
@@ -149,89 +149,89 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                             0x001000    0x001005      
                             0x001008    0x00100d      
                             0x001018    0x00101d      
-                            0x00102a    0x002b06      
-                            0x002b08    0x003323      
+                            0x00102a    0x002b04      
+                            0x002b06    0x003321      
                             0x300000    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            9001 out of 33048 program addresses used, program memory utilization is 27%
+            8999 out of 33048 program addresses used, program memory utilization is 27%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                AddBuffer   0x0025c6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-          ButtonDownState   0x002bea    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-               ButtonInit   0x002b08    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-      ButtonLongDownState   0x002bf0    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-               ButtonProc   0x001f28    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-       ButtonProcEvery1ms   0x002bca    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-  ButtonProcEveryMainLoop   0x002b32    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-              ButtonState   0x002bde    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-            ButtonUpState   0x002be4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-  ButtonVeryLongDownState   0x002bf6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-                   D10K_1   0x00322c    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x003238    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x00322a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                    D10_1   0x003308    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-                     D10x   0x003300    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-             Delay10KTCYx   0x003220    program     extern C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-              Delay10TCYx   0x0032f8    program     extern C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-            DelayIRFreqHi   0x00223e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-            DelayIRFreqLo   0x002254    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                 FXD3232U   0x0030ec    program     extern C:\MCC18\v3_39\src\traditional\math\fxd3232u.c
-                 FXM1616S   0x003046    program     extern C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
-                  FXM3232   0x002fd6    program     extern C:\MCC18\v3_39\src\traditional\math\fxm3232.c
+                AddBuffer   0x0025c4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+          ButtonDownState   0x002be8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+               ButtonInit   0x002b06    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+      ButtonLongDownState   0x002bee    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+               ButtonProc   0x001f30    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+       ButtonProcEvery1ms   0x002bc8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+  ButtonProcEveryMainLoop   0x002b30    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+              ButtonState   0x002bdc    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+            ButtonUpState   0x002be2    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+  ButtonVeryLongDownState   0x002bf4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+                   D10K_1   0x00322a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x003236    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x003228    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                    D10_1   0x003306    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0032fe    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+             Delay10KTCYx   0x00321e    program     extern C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+              Delay10TCYx   0x0032f6    program     extern C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+            DelayIRFreqHi   0x002246    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+            DelayIRFreqLo   0x00225c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                 FXD3232U   0x0030ea    program     extern C:\MCC18\v3_39\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x003044    program     extern C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
+                  FXM3232   0x002fd4    program     extern C:\MCC18\v3_39\src\traditional\math\fxm3232.c
                  High_ISR   0x000008    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               InitBuffer   0x0025bc    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+               InitBuffer   0x0025ba    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
          InitializeSystem   0x001d1a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   Low_ISR   0x000018    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                OpenUSART   0x002ec8    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uopen.c
-            PrintIRBuffer   0x00205e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                OpenUSART   0x002ec6    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uopen.c
+            PrintIRBuffer   0x002066    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                 ProcessIO   0x001d80    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               PutsString   0x0021f8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-           PutsStringCPtr   0x002228    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-           ReadBYTEBuffer   0x0027d6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-               ReadBuffer   0x002604    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   ReadIR   0x001f60    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               ReadSerial   0x002286    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               ReadTimer0   0x003172    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0read.c
-                ReadUSART   0x003134    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uread.c
+               PutsString   0x002200    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+           PutsStringCPtr   0x002230    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+           ReadBYTEBuffer   0x0027d4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+               ReadBuffer   0x002602    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   ReadIR   0x001f68    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               ReadSerial   0x00228e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               ReadTimer0   0x003170    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0read.c
+                ReadUSART   0x003132    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uread.c
         Remapped_High_ISR   0x001008    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
          Remapped_Low_ISR   0x001018    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   SendIR   0x00210a    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               SendIRImpl   0x002118    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   SendIR   0x002112    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               SendIRImpl   0x002120    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                SerialProc   0x001d8c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               TSIGN1616A   0x003092    program     static C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
-        WaitToReadySerial   0x002262    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-          WriteBYTEBuffer   0x00280e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-              WriteBuffer   0x002702    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                 WriteEOF   0x0027a2    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-              WriteSerial   0x0022f8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-              WriteTimer0   0x0031e8    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c
-              WriteTimer1   0x0031b0    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t1write.c
-               WriteUSART   0x00324e    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uwrite.c
+               TSIGN1616A   0x003090    program     static C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
+        WaitToReadySerial   0x00226a    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+          WriteBYTEBuffer   0x00280c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+              WriteBuffer   0x002700    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                 WriteEOF   0x0027a0    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+              WriteSerial   0x002300    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+              WriteTimer0   0x0031e6    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c
+              WriteTimer1   0x0031ae    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t1write.c
+               WriteUSART   0x00324c    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uwrite.c
   YourHighPriorityISRCode   0x001c5a    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
    YourLowPriorityISRCode   0x001caa    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   _2jEnd   0x002eb2    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-       _D10KTCYXCODE_0010   0x003230    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x00323c    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-        _D10TCYXCODE_000A   0x003302    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x003304    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x003306    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+                   _2jEnd   0x002eb0    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+       _D10KTCYXCODE_0010   0x00322e    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x00323a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+        _D10TCYXCODE_000A   0x003300    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x003302    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x003304    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
        ___return_lbl00000   0x001004    program     static                          
-       ___return_lbl00000   0x003044    program     static                          
-       ___return_lbl00000   0x003132    program     static                          
+       ___return_lbl00000   0x003042    program     static                          
+       ___return_lbl00000   0x003130    program     static                          
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00001   0x00100c    program     static                          
-       ___return_lbl00001   0x0032da    program     static                          
+       ___return_lbl00001   0x0032d8    program     static                          
        ___return_lbl00002   0x00101c    program     static                          
-       ___return_lbl00002   0x002e2e    program     static                          
+       ___return_lbl00002   0x002e2c    program     static                          
        ___return_lbl00003   0x00000c    program     static                          
        ___return_lbl00004   0x00001c    program     static                          
-       ___return_lbl00076   0x002252    program     static                          
-       ___return_lbl00077   0x002260    program     static                          
+       ___return_lbl00076   0x00225a    program     static                          
+       ___return_lbl00077   0x002268    program     static                          
                __config_0   0x300000    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                __config_1   0x300001    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
               __config_10   0x30000c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
@@ -244,101 +244,101 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                __config_7   0x300009    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                __config_8   0x30000a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                __config_9   0x30000b    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __init   0x003322    program     extern C:\MCC18\v3_39\src\traditional\stdclib\__init.c
-                   __pa_0   0x002306    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __init   0x003320    program     extern C:\MCC18\v3_39\src\traditional\stdclib\__init.c
+                   __pa_0   0x00230e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                    __pa_0   0x001978    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_0   0x00284c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_0   0x00284a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                    __pa_1   0x001980    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_1   0x00231a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_1   0x002860    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_1   0x002322    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_1   0x00285e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_10   0x001a34    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_10   0x002450    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_10   0x0028ea    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_10   0x002458    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_10   0x0028e8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_11   0x001a42    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_11   0x002460    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_11   0x0028f2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_12   0x00290a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_11   0x002468    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_11   0x0028f0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_12   0x002908    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_12   0x001a58    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_12   0x002476    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_12   0x002478    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_13   0x001a72    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_13   0x002486    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_13   0x002918    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_13   0x002482    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_13   0x002916    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_14   0x001a8a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_14   0x002490    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_14   0x002924    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_14   0x00248a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_14   0x002922    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_15   0x001a9a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_15   0x002498    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_15   0x00292e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_15   0x0024a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_15   0x00292c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_16   0x001ab0    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_16   0x0024b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_16   0x002940    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_17   0x0024c4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_17   0x002950    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_16   0x0024b6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_16   0x00293e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_17   0x0024c2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_17   0x00294e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_17   0x001ac2    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_18   0x00295e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_18   0x0024d2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_18   0x00295c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_18   0x0024d0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_18   0x001ad4    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_19   0x0024e0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_19   0x0024de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_19   0x001ade    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_19   0x00296c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_2   0x002342    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_2   0x00286e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_19   0x00296a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_2   0x00234a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_2   0x00286c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                    __pa_2   0x00198a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_20   0x00297a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_20   0x0024f4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_20   0x002978    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_20   0x0024f2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_20   0x001aee    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_21   0x0024fe    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_21   0x0024fc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_21   0x001afe    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_21   0x002988    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_22   0x002992    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_22   0x002506    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_21   0x002986    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_22   0x002990    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_22   0x002504    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_22   0x001b0e    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_23   0x00299c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_23   0x002514    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_23   0x00299a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_23   0x002512    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_23   0x001b1a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_24   0x0029a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_24   0x00251e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_24   0x0029a4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_24   0x00251c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_24   0x001b28    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_25   0x0029b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_25   0x0029b2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_25   0x001b30    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_25   0x002528    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_26   0x00253a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_26   0x0029be    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_25   0x002526    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_26   0x002538    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_26   0x0029bc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_26   0x001b3a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_27   0x001b44    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_27   0x0029c6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_27   0x002540    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_28   0x00254e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_27   0x0029c4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_27   0x00253e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_28   0x00254c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_28   0x001b4c    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_28   0x0029d0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_29   0x0029de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_29   0x00255c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_28   0x0029ce    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_29   0x0029dc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_29   0x00255a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_29   0x001b5a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_3   0x002390    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_3   0x002398    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                    __pa_3   0x001994    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_3   0x002882    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_30   0x0029e8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_30   0x00256a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_3   0x002880    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_30   0x0029e6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_30   0x002568    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_30   0x001b76    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_31   0x001b90    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_31   0x0029ee    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_31   0x002578    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_32   0x0029f6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_31   0x0029ec    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_31   0x002576    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_32   0x0029f4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_32   0x001baa    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_32   0x002582    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_33   0x00258c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_32   0x002580    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_33   0x00258a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_33   0x001bc2    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_34   0x001bcc    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_34   0x002596    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_34   0x002594    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_35   0x001bda    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  __pa_35   0x0025ae    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_35   0x0025ac    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                   __pa_36   0x001be2    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_37   0x001bec    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_38   0x001bfc    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_39   0x001c0a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_4   0x00239c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_4   0x0023a4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                    __pa_4   0x0019ac    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_4   0x00288c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_4   0x00288a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                   __pa_40   0x001c16    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_41   0x001c22    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_42   0x001c2a    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
@@ -347,85 +347,85 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                   __pa_45   0x001c44    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                   __pa_46   0x001c50    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
                    __pa_5   0x0019c0    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_5   0x0023ac    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_5   0x00289a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_5   0x0023b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_5   0x002898    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                    __pa_6   0x0019dc    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_6   0x0023ce    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_6   0x0028a8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_7   0x0023e6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_7   0x0028bc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_6   0x0023d6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_6   0x0028a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_7   0x0023ee    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_7   0x0028ba    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                    __pa_7   0x0019e6    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_8   0x002410    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_8   0x0028cc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_8   0x002418    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_8   0x0028ca    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
                    __pa_8   0x0019f2    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                   __pa_9   0x0028e0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_9   0x00242a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_9   0x0028de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_9   0x002432    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                    __pa_9   0x001a14    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-               __string_0   0x002af6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_1   0x002ad2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-              __string_10   0x002a2f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-              __string_11   0x0029fc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_2   0x002acc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_3   0x002aa4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_4   0x002a79    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_5   0x002a6f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_6   0x002a6e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_7   0x002a67    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_8   0x002a64    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_9   0x002a5f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_0   0x002af4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_1   0x002ad0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+              __string_10   0x002a2d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+              __string_11   0x0029fa    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_2   0x002aca    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_3   0x002aa2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_4   0x002a77    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_5   0x002a6d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_6   0x002a6c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_7   0x002a65    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_8   0x002a62    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_9   0x002a5d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
               __tmplbl_42   0x001b0e    program     static                          
               __tmplbl_43   0x001956    program     static                          
               __tmplbl_44   0x00193c    program     static                          
               __tmplbl_85   0x00108e    program     static                          
-            __zero_memory   0x0032a0    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                _do_cinit   0x002d92    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
+            __zero_memory   0x00329e    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                _do_cinit   0x002d90    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
-                   _false   0x00312e    program     static                          
+                   _false   0x00312c    program     static                          
                    _reset   0x001000    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                 _startup   0x0032c0    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
-              _usart_putc   0x0032dc    program     extern C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
-               _user_putc   0x003320    program     extern C:\MCC18\v3_39\src\traditional\stdclib\_user_putc.c
-                     atoi   0x002bfc    program     extern C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                compare_l   0x0032b6    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                copy_loop   0x002e04    program     static                          
-            copy_one_byte   0x002e0a    program     static                          
-                     done   0x002e2e    program     static                          
-             done_copying   0x002e18    program     static                          
-                  isdigit   0x00327c    program     extern C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-                     jEnd   0x002eb4    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x002e7c    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                     jEnd   0x002e60    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                     jEnd   0x002cba    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jEndLoop   0x002ca2    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                    jLoop   0x002e9c    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x002e72    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                    jLoop   0x002c54    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                    jLoop   0x002e56    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                   jMatch   0x00329c    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x00329e    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-                  jSkipWS   0x002c2a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jSkipWS1   0x002c3c    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jTstSign   0x002c40    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign1   0x002c4c    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign2   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign3   0x002c54    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                     loop   0x0032ec    program     static C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
-                     loop   0x0032d0    program     static                          
-                     loop   0x0030fa    program     static                          
-                   loop_h   0x0032ae    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                   loop_l   0x0032b8    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                 _startup   0x0032be    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
+              _usart_putc   0x0032da    program     extern C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
+               _user_putc   0x00331e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\_user_putc.c
+                     atoi   0x002bfa    program     extern C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                compare_l   0x0032b4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                copy_loop   0x002e02    program     static                          
+            copy_one_byte   0x002e08    program     static                          
+                     done   0x002e2c    program     static                          
+             done_copying   0x002e16    program     static                          
+                  isdigit   0x00327a    program     extern C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+                     jEnd   0x002eb2    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x002e7a    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                     jEnd   0x002e5e    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x002cb8    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jEndLoop   0x002ca0    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                    jLoop   0x002e9a    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x002e70    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                    jLoop   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                    jLoop   0x002e54    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                   jMatch   0x00329a    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x00329c    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+                  jSkipWS   0x002c28    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jSkipWS1   0x002c3a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jTstSign   0x002c3e    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign1   0x002c4a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign2   0x002c50    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign3   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                     loop   0x0032ea    program     static C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
+                     loop   0x0032ce    program     static                          
+                     loop   0x0030f8    program     static                          
+                   loop_h   0x0032ac    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                   loop_l   0x0032b6    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
                      main   0x001d14    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                     putc   0x002f52    program     extern C:\MCC18\v3_39\src\traditional\stdclib\putc.c
-                putsUSART   0x0030a0    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uputs.c
-                 s_digits   0x00330e    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
+                     putc   0x002f50    program     extern C:\MCC18\v3_39\src\traditional\stdclib\putc.c
+                putsUSART   0x00309e    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uputs.c
+                 s_digits   0x00330c    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
             s_put_n_chars   0x001038    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-                  sprintf   0x002ce6    program     extern C:\MCC18\v3_39\src\traditional\stdclib\sprintf.c
-            strcpypgm2ram   0x002e30    program     extern C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                   strlen   0x002e62    program     extern C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x002e7e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                     test   0x002dac    program     static                          
+                  sprintf   0x002ce4    program     extern C:\MCC18\v3_39\src\traditional\stdclib\sprintf.c
+            strcpypgm2ram   0x002e2e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                   strlen   0x002e60    program     extern C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002e7c    program     extern C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                     test   0x002daa    program     static                          
                  vfprintf   0x001064    program     extern C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-               zero_block   0x0032ae    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+               zero_block   0x0032ac    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
                    ADCON0   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
@@ -787,188 +787,188 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
          InitializeSystem   0x001d1a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                 ProcessIO   0x001d80    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                SerialProc   0x001d8c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               ButtonProc   0x001f28    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   ReadIR   0x001f60    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-            PrintIRBuffer   0x00205e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   SendIR   0x00210a    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               SendIRImpl   0x002118    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               PutsString   0x0021f8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-           PutsStringCPtr   0x002228    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-            DelayIRFreqHi   0x00223e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-       ___return_lbl00076   0x002252    program     static                          
-            DelayIRFreqLo   0x002254    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-       ___return_lbl00077   0x002260    program     static                          
-        WaitToReadySerial   0x002262    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               ReadSerial   0x002286    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-              WriteSerial   0x0022f8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_0   0x002306    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_1   0x00231a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_2   0x002342    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_3   0x002390    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_4   0x00239c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_5   0x0023ac    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_6   0x0023ce    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_7   0x0023e6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_8   0x002410    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                   __pa_9   0x00242a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_10   0x002450    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_11   0x002460    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_12   0x002476    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_13   0x002486    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_14   0x002490    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_15   0x002498    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_16   0x0024b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_17   0x0024c4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_18   0x0024d2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_19   0x0024e0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_20   0x0024f4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_21   0x0024fe    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_22   0x002506    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_23   0x002514    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_24   0x00251e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_25   0x002528    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_26   0x00253a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_27   0x002540    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_28   0x00254e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_29   0x00255c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_30   0x00256a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_31   0x002578    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_32   0x002582    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_33   0x00258c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_34   0x002596    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-                  __pa_35   0x0025ae    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               InitBuffer   0x0025bc    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                AddBuffer   0x0025c6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-               ReadBuffer   0x002604    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-              WriteBuffer   0x002702    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                 WriteEOF   0x0027a2    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-           ReadBYTEBuffer   0x0027d6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-          WriteBYTEBuffer   0x00280e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_0   0x00284c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_1   0x002860    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_2   0x00286e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_3   0x002882    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_4   0x00288c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_5   0x00289a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_6   0x0028a8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_7   0x0028bc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_8   0x0028cc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                   __pa_9   0x0028e0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_10   0x0028ea    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_11   0x0028f2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_12   0x00290a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_13   0x002918    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_14   0x002924    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_15   0x00292e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_16   0x002940    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_17   0x002950    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_18   0x00295e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_19   0x00296c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_20   0x00297a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_21   0x002988    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_22   0x002992    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_23   0x00299c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_24   0x0029a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_25   0x0029b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_26   0x0029be    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_27   0x0029c6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_28   0x0029d0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_29   0x0029de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_30   0x0029e8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_31   0x0029ee    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-                  __pa_32   0x0029f6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
-              __string_11   0x0029fc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-              __string_10   0x002a2f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_9   0x002a5f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_8   0x002a64    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_7   0x002a67    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_6   0x002a6e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_5   0x002a6f    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_4   0x002a79    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_3   0x002aa4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_2   0x002acc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_1   0x002ad2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               __string_0   0x002af6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
-               ButtonInit   0x002b08    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-  ButtonProcEveryMainLoop   0x002b32    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-       ButtonProcEvery1ms   0x002bca    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-              ButtonState   0x002bde    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-            ButtonUpState   0x002be4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-          ButtonDownState   0x002bea    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-      ButtonLongDownState   0x002bf0    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-  ButtonVeryLongDownState   0x002bf6    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
-                     atoi   0x002bfc    program     extern C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                  jSkipWS   0x002c2a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jSkipWS1   0x002c3c    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jTstSign   0x002c40    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign1   0x002c4c    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign2   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                jTstSign3   0x002c54    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                    jLoop   0x002c54    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                 jEndLoop   0x002ca2    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                     jEnd   0x002cba    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
-                  sprintf   0x002ce6    program     extern C:\MCC18\v3_39\src\traditional\stdclib\sprintf.c
-                _do_cinit   0x002d92    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
-                     test   0x002dac    program     static                          
-                copy_loop   0x002e04    program     static                          
-            copy_one_byte   0x002e0a    program     static                          
-             done_copying   0x002e18    program     static                          
-                     done   0x002e2e    program     static                          
-       ___return_lbl00002   0x002e2e    program     static                          
-            strcpypgm2ram   0x002e30    program     extern C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                    jLoop   0x002e56    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                     jEnd   0x002e60    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
-                   strlen   0x002e62    program     extern C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                    jLoop   0x002e72    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                     jEnd   0x002e7c    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x002e7e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x002e9c    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x002eb2    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x002eb4    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
-                OpenUSART   0x002ec8    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uopen.c
-                     putc   0x002f52    program     extern C:\MCC18\v3_39\src\traditional\stdclib\putc.c
-                  FXM3232   0x002fd6    program     extern C:\MCC18\v3_39\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x003044    program     static                          
-                 FXM1616S   0x003046    program     extern C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x003092    program     static C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
-                putsUSART   0x0030a0    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uputs.c
-                 FXD3232U   0x0030ec    program     extern C:\MCC18\v3_39\src\traditional\math\fxd3232u.c
-                     loop   0x0030fa    program     static                          
-                   _false   0x00312e    program     static                          
-       ___return_lbl00000   0x003132    program     static                          
-                ReadUSART   0x003134    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uread.c
-               ReadTimer0   0x003172    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0read.c
-              WriteTimer1   0x0031b0    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t1write.c
-              WriteTimer0   0x0031e8    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c
-             Delay10KTCYx   0x003220    program     extern C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x00322a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                   D10K_1   0x00322c    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x003230    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x003238    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x00323c    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
-               WriteUSART   0x00324e    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uwrite.c
-                  isdigit   0x00327c    program     extern C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-                   jMatch   0x00329c    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x00329e    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
-            __zero_memory   0x0032a0    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                   loop_h   0x0032ae    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-               zero_block   0x0032ae    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                compare_l   0x0032b6    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                   loop_l   0x0032b8    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
-                 _startup   0x0032c0    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
-                     loop   0x0032d0    program     static                          
-       ___return_lbl00001   0x0032da    program     static                          
-              _usart_putc   0x0032dc    program     extern C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
-                     loop   0x0032ec    program     static C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
-              Delay10TCYx   0x0032f8    program     extern C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-                     D10x   0x003300    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x003302    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x003304    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x003306    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x003308    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
-                 s_digits   0x00330e    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
-               _user_putc   0x003320    program     extern C:\MCC18\v3_39\src\traditional\stdclib\_user_putc.c
-                   __init   0x003322    program     extern C:\MCC18\v3_39\src\traditional\stdclib\__init.c
+               ButtonProc   0x001f30    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   ReadIR   0x001f68    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+            PrintIRBuffer   0x002066    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   SendIR   0x002112    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               SendIRImpl   0x002120    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               PutsString   0x002200    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+           PutsStringCPtr   0x002230    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+            DelayIRFreqHi   0x002246    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+       ___return_lbl00076   0x00225a    program     static                          
+            DelayIRFreqLo   0x00225c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+       ___return_lbl00077   0x002268    program     static                          
+        WaitToReadySerial   0x00226a    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               ReadSerial   0x00228e    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+              WriteSerial   0x002300    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_0   0x00230e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_1   0x002322    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_2   0x00234a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_3   0x002398    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_4   0x0023a4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_5   0x0023b4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_6   0x0023d6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_7   0x0023ee    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_8   0x002418    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                   __pa_9   0x002432    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_10   0x002458    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_11   0x002468    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_12   0x002478    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_13   0x002482    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_14   0x00248a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_15   0x0024a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_16   0x0024b6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_17   0x0024c2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_18   0x0024d0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_19   0x0024de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_20   0x0024f2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_21   0x0024fc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_22   0x002504    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_23   0x002512    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_24   0x00251c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_25   0x002526    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_26   0x002538    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_27   0x00253e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_28   0x00254c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_29   0x00255a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_30   0x002568    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_31   0x002576    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_32   0x002580    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_33   0x00258a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_34   0x002594    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+                  __pa_35   0x0025ac    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               InitBuffer   0x0025ba    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                AddBuffer   0x0025c4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+               ReadBuffer   0x002602    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+              WriteBuffer   0x002700    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                 WriteEOF   0x0027a0    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+           ReadBYTEBuffer   0x0027d4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+          WriteBYTEBuffer   0x00280c    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_0   0x00284a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_1   0x00285e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_2   0x00286c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_3   0x002880    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_4   0x00288a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_5   0x002898    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_6   0x0028a6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_7   0x0028ba    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_8   0x0028ca    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                   __pa_9   0x0028de    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_10   0x0028e8    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_11   0x0028f0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_12   0x002908    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_13   0x002916    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_14   0x002922    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_15   0x00292c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_16   0x00293e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_17   0x00294e    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_18   0x00295c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_19   0x00296a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_20   0x002978    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_21   0x002986    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_22   0x002990    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_23   0x00299a    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_24   0x0029a4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_25   0x0029b2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_26   0x0029bc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_27   0x0029c4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_28   0x0029ce    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_29   0x0029dc    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_30   0x0029e6    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_31   0x0029ec    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+                  __pa_32   0x0029f4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/buffer.c
+              __string_11   0x0029fa    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+              __string_10   0x002a2d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_9   0x002a5d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_8   0x002a62    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_7   0x002a65    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_6   0x002a6c    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_5   0x002a6d    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_4   0x002a77    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_3   0x002aa2    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_2   0x002aca    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_1   0x002ad0    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               __string_0   0x002af4    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
+               ButtonInit   0x002b06    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+  ButtonProcEveryMainLoop   0x002b30    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+       ButtonProcEvery1ms   0x002bc8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+              ButtonState   0x002bdc    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+            ButtonUpState   0x002be2    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+          ButtonDownState   0x002be8    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+      ButtonLongDownState   0x002bee    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+  ButtonVeryLongDownState   0x002bf4    program     extern /Users/ikeda/pj/git/pic/bt-remocon/Firmware/button.c
+                     atoi   0x002bfa    program     extern C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                  jSkipWS   0x002c28    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jSkipWS1   0x002c3a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jTstSign   0x002c3e    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign1   0x002c4a    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign2   0x002c50    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                jTstSign3   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                    jLoop   0x002c52    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                 jEndLoop   0x002ca0    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                     jEnd   0x002cb8    program     static C:\MCC18\v3_39\src\traditional\stdclib\atoi.asm
+                  sprintf   0x002ce4    program     extern C:\MCC18\v3_39\src\traditional\stdclib\sprintf.c
+                _do_cinit   0x002d90    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
+                     test   0x002daa    program     static                          
+                copy_loop   0x002e02    program     static                          
+            copy_one_byte   0x002e08    program     static                          
+             done_copying   0x002e16    program     static                          
+                     done   0x002e2c    program     static                          
+       ___return_lbl00002   0x002e2c    program     static                          
+            strcpypgm2ram   0x002e2e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                    jLoop   0x002e54    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x002e5e    program     static C:\MCC18\v3_39\src\traditional\stdclib\scpyp2r.asm
+                   strlen   0x002e60    program     extern C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                    jLoop   0x002e70    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                     jEnd   0x002e7a    program     static C:\MCC18\v3_39\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002e7c    program     extern C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x002e9a    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x002eb0    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x002eb2    program     static C:\MCC18\v3_39\src\traditional\stdclib\slenpgm.asm
+                OpenUSART   0x002ec6    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uopen.c
+                     putc   0x002f50    program     extern C:\MCC18\v3_39\src\traditional\stdclib\putc.c
+                  FXM3232   0x002fd4    program     extern C:\MCC18\v3_39\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x003042    program     static                          
+                 FXM1616S   0x003044    program     extern C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x003090    program     static C:\MCC18\v3_39\src\traditional\math\fxm1616s.asm
+                putsUSART   0x00309e    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uputs.c
+                 FXD3232U   0x0030ea    program     extern C:\MCC18\v3_39\src\traditional\math\fxd3232u.c
+                     loop   0x0030f8    program     static                          
+                   _false   0x00312c    program     static                          
+       ___return_lbl00000   0x003130    program     static                          
+                ReadUSART   0x003132    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uread.c
+               ReadTimer0   0x003170    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0read.c
+              WriteTimer1   0x0031ae    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t1write.c
+              WriteTimer0   0x0031e6    program     extern C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c
+             Delay10KTCYx   0x00321e    program     extern C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x003228    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x00322a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x00322e    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x003236    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x00323a    program     static C:\MCC18\v3_39\src\traditional\delays\d10ktcyx.asm
+               WriteUSART   0x00324c    program     extern C:\MCC18\v3_39\src\pmc_common\USART\uwrite.c
+                  isdigit   0x00327a    program     extern C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x00329a    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x00329c    program     static C:\MCC18\v3_39\src\traditional\stdclib\isdigit.asm
+            __zero_memory   0x00329e    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                   loop_h   0x0032ac    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+               zero_block   0x0032ac    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                compare_l   0x0032b4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                   loop_l   0x0032b6    program     static C:\MCC18\v3_39\src\traditional\proc\p18F2550.asm
+                 _startup   0x0032be    program     extern C:\MCC18\v3_39\src\traditional\startup\c018i.c
+                     loop   0x0032ce    program     static                          
+       ___return_lbl00001   0x0032d8    program     static                          
+              _usart_putc   0x0032da    program     extern C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
+                     loop   0x0032ea    program     static C:\MCC18\v3_39\src\pmc_common\USART\_usartpc.asm
+              Delay10TCYx   0x0032f6    program     extern C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0032fe    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x003300    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x003302    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x003304    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x003306    program     static C:\MCC18\v3_39\src\traditional\delays\d10tcyx.asm
+                 s_digits   0x00330c    program     static C:\MCC18\v3_39\src\traditional\stdclib\vfprintf.c
+               _user_putc   0x00331e    program     extern C:\MCC18\v3_39\src\traditional\stdclib\_user_putc.c
+                   __init   0x003320    program     extern C:\MCC18\v3_39\src\traditional\stdclib\__init.c
                __config_0   0x300000    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                __config_1   0x300001    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
                __config_2   0x300002    program     static /Users/ikeda/pj/git/pic/bt-remocon/Firmware/main.c
